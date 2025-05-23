@@ -7,7 +7,7 @@ use enigo::{Enigo, MouseControllable};
 fn main() {
     let args: Vec<String> = env::args().collect();
     let mut enigo = Enigo::new();
-    
+
     let mouse_movement_x: i32 = 50;
     let mouse_movement_y: i32 = 50;
     let sleep_time_secs: u64 = 5;
@@ -16,10 +16,10 @@ fn main() {
         .and_then(|s| s.parse::<i32>().ok())
         .unwrap_or(mouse_movement_x);
     
-    let mouse_movement_x = args.get(2)
+    let mouse_movement_y = args.get(2)
         .and_then(|s| s.parse::<i32>().ok())
-        .unwrap_or(mouse_movement_x);
-    
+        .unwrap_or(mouse_movement_y);
+
     
     let sleep_time_secs = args.get(3)
         .and_then(|s| s.parse::<u64>().ok())
